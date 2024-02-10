@@ -14,12 +14,12 @@ passport.use(
 	"local.signin",
 	new LocalStrategy(
 		{
-			usernameField: "email",
+			usernameField: "username",
 			passwordField: "password",
 			passReqToCallback: true,
 		},
-		async (req, email, password, done) => {
-			const rows = await orm.dueño.findOne({ where: { email: email } });
+		async (req, username, password, done) => {
+			const rows = await orm.dueño.findOne({ where: { email:username } });
 			if (rows) {
 				const user = rows;
 				const validPassword = await helpers.comparePassword(
@@ -52,18 +52,18 @@ passport.use(
 	"local.signup",
 	new LocalStrategy(
 		{
-			usernameField: "email",
+			usernameField: "username",
 			passwordField: "password",
 			passReqToCallback: true,
 		},
-		async (req, email, password, done) => {
-			const usuarios = await orm.dueño.findOne({ where: { email: email }});
+		async (req, username, password, done) => {
+			const usuarios = await orm.dueño.findOne({ where: { email: username }});
 			if (usuarios === null) {
-				const { fullname, username, email, password} = req.body;
+				const { fullname, name, email, password} = req.body;
 				let nuevoGerente = {
 					fullname: cifrarDatos(fullname),
-					username: cifrarDatos(username),
-					email,
+					name: cifrarDatos(name),
+					email:username,
 					password,
 				};
 				nuevoGerente.password = await helpers.hashPassword(password);

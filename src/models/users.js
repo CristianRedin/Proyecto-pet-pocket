@@ -6,8 +6,8 @@ const cliente=(sequelize,type)=>{
             autoIncrement: true
         },
         fullname: type.STRING,
-        username: type.STRING,
-        email: type.STRING,
+        name: type.STRING,
+        email: type.STRING(99),
         password: type.STRING,
         
         crearGerente:{

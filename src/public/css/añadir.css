@@ -152,7 +152,7 @@ body::after {
     font-size: 30px; /* Ajusta el tamaño de la fuente de las etiquetas según tus necesidades */
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
-    color: #F5F5DC;
+    color: #e66007;
 }
 
 #card1 input {
@@ -239,4 +239,9 @@ body::after {
     background-color: #0085FF;
     font-size: 30px;
     color: #FFFFFF;
+}
+.text{
+    font-style: italic;
+    font-weight: 600;
+    
 }

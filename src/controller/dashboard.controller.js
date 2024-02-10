@@ -19,4 +19,7 @@ dashboard.showsolicitud=(req, res) => {
 dashboard.showNotificacion_Eliminar = (req, res) => {
     res.render('dashboard/Notificacion_Eliminar')
 }
+dashboard.showPerfil= (req, res) => {
+    res.render('dashboard/Perfil')
+}
 module.exports = dashboard

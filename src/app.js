@@ -48,7 +48,7 @@ const handlebars = exphbs.create({
 })
 
 /// archivos compartidos
-app.set('port', process.env.PORT || 4200);
+app.set('port', process.env.PORT || 4500);
 app.set('views', path.join(__dirname, 'views'));
 app.engine('.hbs', handlebars.engine);
 app.set('view engine', '.hbs');
