@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/vista.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/img/logo4.jpg">
+    <title>Bienvenido</title>
+</head>
+<body>
+    <div id="sidebar">
+        <img src="/img/logo4.jpg" alt="" class="centered" width="100%">
+        <h1>Bienvenido</h1><br>
+        <ul>
+            <li>
+                <button id="sidebar-button" style="margin: 10px;">
+                    <img src="/img/iconocasa.png" alt="restaurante">Inicio
+                </button>
+                <button id="sidebar-button" style="margin: 10px;">
+                    <img src="/img/iconocasa.png" alt="restaurante">Crear publicacion
+                </button>
+                <button id="sidebar-button" style="margin: 10px;">
+                    <img src="/img/iconocasa.png" alt="restaurante">Amistades
+                </button>
+                <button id="sidebar-button" style="margin: 10px;">
+                    <img src="/img/iconocasa.png" alt="restaurante">Perfil
+                </button>
+            </li>
+        </ul>
+    </div>
+    <div id="main-content">
+
+        <h1>Mis Publicaciones</h1>
+
+        <div id="user-info">
+            <img src="/img/usuarioicono.png">
+            <h2>David</h2>
+            <p>Publicacion</p>
+        </div>
+
+        <div id="card-container">
+
+            {{!-- <div id="card1">
+                <div id="card-image">
+                    <img src="/img/logo1.jpg" alt="DigitalWaiter" height="60px">
+                </div>
+                <button id="edit-btn"><a href="/login">Editar</a></button>
+                <button id="manage-btn"><a href="/dashboard">Gestionar</a></button>
+            </div> --}}
+
+            <div id="card2">
+                <h3>Agregar<br>Publicacion</h3>
+                <button><a href="/agregar"><img src="/img/plus.png"></a></button>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>
+
